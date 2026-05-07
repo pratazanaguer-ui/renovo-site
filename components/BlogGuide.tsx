@@ -27,7 +27,7 @@ const articles = [
 ];
 
 function ArticleCard({ article, index }: { article: (typeof articles)[0]; index: number }) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLAnchorElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
