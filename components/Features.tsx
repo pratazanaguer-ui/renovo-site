@@ -188,7 +188,7 @@ function ToolsPreview() {
       <div className="w-px self-stretch my-4" style={{ background: "rgba(255,255,255,0.07)" }} />
 
       {/* ── CENTER: processing ── */}
-      <div className="w-28 flex flex-col items-center justify-center gap-3 px-3 flex-shrink-0">
+      <div className="w-20 sm:w-28 flex flex-col items-center justify-center gap-3 px-2 sm:px-3 flex-shrink-0">
         <div className="relative w-12 h-12 flex items-center justify-center">
           {/* Spinning ring */}
           <motion.div
@@ -222,11 +222,11 @@ function ToolsPreview() {
       <div className="w-px self-stretch my-4" style={{ background: "rgba(255,255,255,0.07)" }} />
 
       {/* ── RIGHT: tools — 3×3 icon grid + overflow hint ── */}
-      <div className="flex-1 flex flex-col pt-3 pb-2 px-3 min-w-0 overflow-hidden relative">
-        <p className="text-white/35 text-[10px] font-bold tracking-widest uppercase mb-3">
+      <div className="flex-1 flex flex-col pt-3 pb-2 px-2 sm:px-3 min-w-0 overflow-hidden relative">
+        <p className="text-white/35 text-[10px] font-bold tracking-widest uppercase mb-2">
           Ferramentas
         </p>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-1.5">
           {[
             { gradient: "linear-gradient(135deg,#c62828,#8b0000)", icon: Icons.shield,      label: "Estou em Crise" },
             { gradient: "linear-gradient(135deg,#e65100,#bf360c)", icon: Icons.warning,     label: "Inimigos"       },

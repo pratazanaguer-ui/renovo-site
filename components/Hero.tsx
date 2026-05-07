@@ -53,16 +53,16 @@ export default function Hero() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 mb-10 w-full sm:w-auto">
               <Link
                 href="#comecar"
-                className="bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-full text-base transition-all duration-200 whitespace-nowrap"
+                className="bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-full text-base transition-all duration-200 text-center whitespace-nowrap"
               >
                 Começar Agora — É Grátis
               </Link>
               <Link
                 href="#como-funciona"
-                className="border-2 border-green-500/50 hover:border-green-400 text-green-400 hover:text-green-300 px-8 py-4 rounded-full text-base transition-all duration-200 whitespace-nowrap bg-transparent"
+                className="border-2 border-green-500/50 hover:border-green-400 text-green-400 hover:text-green-300 px-8 py-4 rounded-full text-base transition-all duration-200 text-center whitespace-nowrap bg-transparent"
               >
                 Ver como funciona
               </Link>

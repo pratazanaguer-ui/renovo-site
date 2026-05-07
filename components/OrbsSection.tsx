@@ -44,12 +44,12 @@ function OrbCard({ orb }: { orb: typeof orbs[0] }) {
           className="absolute pointer-events-none"
           style={{
             top: "50%", left: "50%",
-            width: 130, height: 130,
+            width: 140, height: 140,
             transform: "translate(-50%, -50%)",
             borderRadius: "50%",
             background: orb.glow,
-            filter: "blur(26px)",
-            opacity: 0.38,
+            filter: "blur(30px)",
+            opacity: 0.5,
           }}
         />
 
@@ -86,7 +86,7 @@ function OrbCard({ orb }: { orb: typeof orbs[0] }) {
           className="absolute inset-0 rounded-full transition-transform duration-300 group-hover:scale-105"
           style={{
             background: orb.gradient,
-            boxShadow: `0 6px 24px ${orb.glow}55, inset -4px -4px 12px rgba(0,0,0,0.4), inset 2px 2px 6px rgba(255,255,255,0.12)`,
+            boxShadow: `0 8px 32px ${orb.glow}77, 0 2px 8px ${orb.glow}44, inset -4px -4px 12px rgba(0,0,0,0.4), inset 2px 2px 6px rgba(255,255,255,0.18)`,
           }}
         />
         {/* Specular highlight */}

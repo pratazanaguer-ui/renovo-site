@@ -64,7 +64,7 @@ export default function Stories() {
   const statsInView = useInView(statsRef, { once: true, margin: "-60px" });
 
   return (
-    <section id="depoimentos" style={{ backgroundColor: "#080808" }} className="py-32 px-6">
+    <section id="depoimentos" style={{ backgroundColor: "#080808" }} className="pt-16 pb-32 px-6">
       <div className="max-w-5xl mx-auto">
 
         {/* Section header */}
