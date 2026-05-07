@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green: #22c55e;
+  --color-green-dark: #16a34a;
+  --color-forest: #052e16;
+  --color-navy: #0f172a;
+  --color-panel: #1e293b;
+  --color-cream: #f6f2e4;
+
+  --font-poppins: Poppins, sans-serif;
+}
+
+body {
+  background-color: #080808;
+  color: #ffffff;
+  font-family: Poppins, sans-serif;
+}
