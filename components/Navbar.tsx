@@ -76,7 +76,7 @@ export default function Navbar() {
               href="#comecar"
               className="hidden md:inline-flex items-center px-5 py-2.5 rounded-full bg-green text-navy font-semibold text-sm hover:brightness-110 active:scale-95 transition-all duration-200"
             >
-              Começar Agora
+              Baixar o App
             </Link>
 
             <button
@@ -131,7 +131,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex items-center justify-center px-5 py-3 rounded-full bg-green text-navy font-semibold text-sm hover:brightness-110 transition-all duration-200"
               >
-                Começar Agora
+                Baixar o App
               </Link>
             </div>
           </motion.div>

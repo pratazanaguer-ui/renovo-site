@@ -168,7 +168,7 @@ export default function BlogArticleLayout({ title, heroImage, readTime, date, in
                           className="flex-shrink-0 px-6 py-3 rounded-full bg-green-500 hover:bg-green-400 text-black font-black text-sm transition-colors duration-200 whitespace-nowrap"
                           style={{ boxShadow: "0 0 24px rgba(34,197,94,0.3)" }}
                         >
-                          Experimentar grátis
+                          Baixar o App
                         </a>
                       </div>
                     )}

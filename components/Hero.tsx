@@ -58,7 +58,7 @@ export default function Hero() {
                 href="#comecar"
                 className="bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-full text-base transition-all duration-200 text-center whitespace-nowrap"
               >
-                Começar Agora — É Grátis
+                Baixar o App
               </Link>
               <Link
                 href="#como-funciona"

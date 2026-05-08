@@ -9,8 +9,8 @@ const faqs = [
     a: "O RENOVO é um aplicativo brasileiro criado para homens que querem se libertar do vício em pornografia. Ele combina rastreamento de progresso, ferramentas de combate ao impulso, um terapeuta com inteligência artificial e uma comunidade de apoio — tudo num único lugar, disponível 24 horas por dia.",
   },
   {
-    q: "O RENOVO é gratuito?",
-    a: "O RENOVO oferece acesso gratuito com funcionalidades essenciais. Para ter acesso completo a todas as ferramentas — incluindo o Terapeuta Luigi, a Universidade da Renovação e o plano personalizado —, existe um plano premium com investimento acessível.",
+    q: "O RENOVO é pago?",
+    a: "Sim. O RENOVO é um aplicativo premium com investimento acessível. Ao assinar, você tem acesso completo a todas as ferramentas — incluindo o Terapeuta Luigi, a Universidade da Renovação, o Botão de Pânico, a Comunidade e muito mais.",
   },
   {
     q: "O Luigi é uma IA ou um humano?",
