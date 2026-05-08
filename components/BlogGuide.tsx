@@ -99,7 +99,7 @@ export default function BlogGuide() {
   const btnInView = useInView(btnRef, { once: true, margin: "-40px" });
 
   return (
-    <section style={{ backgroundColor: "#080808" }} className="py-32 px-6">
+    <section style={{ backgroundColor: "#080808" }} className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
 
         {/* Header */}

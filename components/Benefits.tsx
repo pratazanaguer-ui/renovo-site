@@ -241,7 +241,7 @@ export default function Benefits() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section style={{ backgroundColor: "#080808" }} className="pt-32 pb-16 px-6">
+    <section style={{ backgroundColor: "#080808" }} className="pt-20 pb-12 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
 

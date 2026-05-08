@@ -25,10 +25,8 @@ const orbs = [
 function OrbCard({ orb }: { orb: typeof orbs[0] }) {
   return (
     <div
-      className="group flex flex-col items-center gap-4 flex-shrink-0"
+      className="orb-card group flex flex-col items-center gap-3 flex-shrink-0"
       style={{
-        width: 176,
-        padding: "28px 16px 22px",
         borderRadius: 24,
         background: "rgba(255,255,255,0.03)",
         border: "1px solid rgba(255,255,255,0.07)",
@@ -37,14 +35,13 @@ function OrbCard({ orb }: { orb: typeof orbs[0] }) {
       }}
     >
       {/* Orb sphere */}
-      <div className="relative flex-shrink-0" style={{ width: 108, height: 108 }}>
+      <div className="orb-sphere-wrap relative flex-shrink-0">
 
         {/* Colored blur glow behind */}
         <div
-          className="absolute pointer-events-none"
+          className="orb-glow absolute pointer-events-none"
           style={{
             top: "50%", left: "50%",
-            width: 140, height: 140,
             transform: "translate(-50%, -50%)",
             borderRadius: "50%",
             background: orb.glow,
@@ -55,10 +52,10 @@ function OrbCard({ orb }: { orb: typeof orbs[0] }) {
 
         {/* Outer ring — slow CW */}
         <svg
+          className="orb-ring-outer"
           viewBox="0 0 148 148"
           style={{
             position: "absolute",
-            width: 148, height: 148,
             top: "50%", left: "50%",
             animation: "orb-cw 11s linear infinite",
             pointerEvents: "none",
@@ -69,10 +66,10 @@ function OrbCard({ orb }: { orb: typeof orbs[0] }) {
 
         {/* Inner ring — faster CCW */}
         <svg
+          className="orb-ring-inner"
           viewBox="0 0 132 132"
           style={{
             position: "absolute",
-            width: 132, height: 132,
             top: "50%", left: "50%",
             animation: "orb-ccw 7s linear infinite",
             pointerEvents: "none",
@@ -101,7 +98,7 @@ function OrbCard({ orb }: { orb: typeof orbs[0] }) {
         />
         {/* Sparkle icon */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <svg width="46" height="46" viewBox="0 0 24 24" fill="none">
+          <svg className="orb-sparkle" viewBox="0 0 24 24" fill="none">
             <path
               d="M12 2L13.6 9.6L21 12L13.6 14.4L12 22L10.4 14.4L3 12L10.4 9.6Z"
               fill="white"
@@ -112,9 +109,9 @@ function OrbCard({ orb }: { orb: typeof orbs[0] }) {
       </div>
 
       {/* Text */}
-      <div className="flex flex-col items-center gap-1">
-        <span className="text-white font-bold text-sm text-center leading-tight">{orb.name}</span>
-        <span className="font-bold text-xs" style={{ color: orb.dayColor }}>{orb.days}</span>
+      <div className="flex flex-col items-center gap-0.5">
+        <span className="orb-name text-white font-bold text-center leading-tight">{orb.name}</span>
+        <span className="orb-days font-bold" style={{ color: orb.dayColor }}>{orb.days}</span>
       </div>
     </div>
   );
@@ -127,7 +124,7 @@ export default function OrbsSection() {
   const doubled = [...orbs, ...orbs];
 
   return (
-    <section style={{ backgroundColor: "#080808" }} className="py-32 overflow-hidden">
+    <section style={{ backgroundColor: "#080808" }} className="py-20 overflow-hidden">
 
       <style>{`
         @keyframes marquee {
@@ -147,6 +144,28 @@ export default function OrbsSection() {
         @keyframes orb-ccw {
           from { transform: translate(-50%, -50%) rotate(0deg); }
           to   { transform: translate(-50%, -50%) rotate(-360deg); }
+        }
+
+        /* ── OrbCard base sizing ── */
+        .orb-card       { width: 176px; padding: 28px 16px 22px; }
+        .orb-sphere-wrap{ width: 108px; height: 108px; }
+        .orb-glow       { width: 140px; height: 140px; }
+        .orb-ring-outer { width: 148px; height: 148px; }
+        .orb-ring-inner { width: 132px; height: 132px; }
+        .orb-sparkle    { width: 46px;  height: 46px;  }
+        .orb-name       { font-size: 14px; }
+        .orb-days       { font-size: 12px; }
+
+        /* ── OrbCard mobile (≤640px) ── */
+        @media (max-width: 640px) {
+          .orb-card       { width: 116px; padding: 18px 10px 14px; }
+          .orb-sphere-wrap{ width: 72px;  height: 72px; }
+          .orb-glow       { width: 92px;  height: 92px; }
+          .orb-ring-outer { width: 98px;  height: 98px; }
+          .orb-ring-inner { width: 88px;  height: 88px; }
+          .orb-sparkle    { width: 30px;  height: 30px; }
+          .orb-name       { font-size: 11px; }
+          .orb-days       { font-size: 10px; }
         }
       `}</style>
 
@@ -194,7 +213,7 @@ export default function OrbsSection() {
         />
 
         <div className="overflow-hidden">
-          <div className="orbs-track flex gap-5 w-max px-6">
+          <div className="orbs-track flex gap-3 sm:gap-5 w-max px-4 sm:px-6">
             {doubled.map((orb, i) => (
               <OrbCard key={i} orb={orb} />
             ))}

@@ -728,7 +728,7 @@ export default function HowItWorks() {
   const titleInView = useInView(titleRef, { once: true, margin: "-60px" });
 
   return (
-    <section id="como-funciona" style={{ backgroundColor: "#080808" }} className="py-32 px-6">
+    <section id="como-funciona" style={{ backgroundColor: "#080808" }} className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
 
         {/* Section header */}

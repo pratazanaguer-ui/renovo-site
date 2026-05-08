@@ -56,7 +56,7 @@ export default function MissionStatement() {
     <section
       ref={containerRef}
       style={{ backgroundColor: "#080808" }}
-      className="py-32 px-6"
+      className="py-20 px-6"
     >
       <div className="max-w-4xl mx-auto text-center">
         <p className="text-green-500 text-xs font-bold tracking-widest uppercase mb-8">

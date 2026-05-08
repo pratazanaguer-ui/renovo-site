@@ -125,7 +125,7 @@ export default function FAQ() {
   const titleInView = useInView(titleRef, { once: true, margin: "-60px" });
 
   return (
-    <section id="faq" style={{ backgroundColor: "#080808" }} className="py-32 px-6">
+    <section id="faq" style={{ backgroundColor: "#080808" }} className="py-20 px-6">
       <div className="max-w-3xl mx-auto">
 
         {/* Header */}

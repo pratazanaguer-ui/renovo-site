@@ -697,8 +697,14 @@ function FeatureCard({ card, index }: { card: (typeof featureCards)[0]; index: n
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, ease: "easeOut", delay: (index % 2) * 0.1 }}
-      className="flex flex-col gap-5"
+      className="flex flex-col gap-4 pb-6"
     >
+      {/* Text — above the card */}
+      <div className="px-1">
+        <h3 className="text-white font-black text-xl mb-1.5">{card.title}</h3>
+        <p className="text-gray-500 text-sm leading-relaxed">{card.description}</p>
+      </div>
+
       {/* Container card */}
       <motion.div
         whileHover={{ scale: 1.015, transition: { duration: 0.22 } }}
@@ -731,12 +737,6 @@ function FeatureCard({ card, index }: { card: (typeof featureCards)[0]; index: n
         <div className="absolute top-0 inset-x-0 h-px pointer-events-none"
           style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent)" }} />
       </motion.div>
-
-      {/* Text */}
-      <div className="px-1">
-        <h3 className="text-white font-black text-xl mb-2">{card.title}</h3>
-        <p className="text-gray-500 text-sm leading-relaxed">{card.description}</p>
-      </div>
     </motion.div>
   );
 }
@@ -746,7 +746,7 @@ export default function Features() {
   const titleInView = useInView(titleRef, { once: true, margin: "-60px" });
 
   return (
-    <section id="funcionalidades" style={{ backgroundColor: "#080808" }} className="py-32 px-6">
+    <section id="funcionalidades" style={{ backgroundColor: "#080808" }} className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           ref={titleRef}

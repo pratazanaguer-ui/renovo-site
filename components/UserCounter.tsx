@@ -30,7 +30,7 @@ export default function UserCounter() {
   return (
     <section
       style={{ backgroundColor: "#080808" }}
-      className="py-24 px-6"
+      className="py-16 px-6"
     >
       <div className="max-w-4xl mx-auto flex justify-center">
         <motion.div
